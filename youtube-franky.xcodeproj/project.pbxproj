@@ -19,6 +19,7 @@
 		3130A75126EA478C002F5BFB /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130A75026EA478C002F5BFB /* Response.swift */; };
 		3130A75326EA584B002F5BFB /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130A75226EA584B002F5BFB /* VideoTableViewCell.swift */; };
 		3130A75C26EA6043002F5BFB /* CacheManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130A75B26EA6043002F5BFB /* CacheManager.swift */; };
+		3130A75E26EA631C002F5BFB /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3130A75D26EA631C002F5BFB /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		3130A75026EA478C002F5BFB /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		3130A75226EA584B002F5BFB /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		3130A75B26EA6043002F5BFB /* CacheManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CacheManager.swift; sourceTree = "<group>"; };
+		3130A75D26EA631C002F5BFB /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				3130A73426E8BE11002F5BFB /* ViewController.swift */,
+				3130A75D26EA631C002F5BFB /* DetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -210,6 +213,7 @@
 				3130A74F26EA1237002F5BFB /* ApiService.swift in Sources */,
 				3130A74B26EA0D77002F5BFB /* Constants.swift in Sources */,
 				3130A75326EA584B002F5BFB /* VideoTableViewCell.swift in Sources */,
+				3130A75E26EA631C002F5BFB /* DetailViewController.swift in Sources */,
 				3130A74D26EA0FB7002F5BFB /* Video.swift in Sources */,
 				3130A75126EA478C002F5BFB /* Response.swift in Sources */,
 			);
