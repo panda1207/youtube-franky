@@ -9,19 +9,50 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var response: Response?
+    @IBOutlet weak var tableView: UITableView!
+    
+    var video = [Video]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Model.getVideo { response, error in
+        Model.getVideo { video, error in
             
             DispatchQueue.main.async {
-                self.response = response
+                self.video = video!
+                self.tableView.reloadData()
             }
         }
+        
+        tableView.delegate = self
+        tableView.dataSource = self
     }
 
+}
+
+extension ViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return video.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEO_CELL, for: indexPath)
+        
+        let title = self.video[indexPath.row].title
+        
+        cell.textLabel?.text = title
+        
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        
+    }
+    
 }
 

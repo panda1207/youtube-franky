@@ -9,9 +9,9 @@ import Foundation
 
 class Model {
     
-    static func getVideo(completion: @escaping (_ response: Response?, _ error: Error?) -> Void) {
+    static func getVideo(completion: @escaping (_ response: [Video]?, _ error: Error?) -> Void) {
         
-        let url = URL(string: "https://youtube.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLMRqhzcHGw1ZkH8RuznGMS0NZs0jWQQ5a&key=AIzaSyB7_mg39rTIr4l2f5cv2L52d1A1cUqjnSc")
+        let url = URL(string: Constants.API_URL)
         
         guard url != nil else {
             print("URL not found")
@@ -29,8 +29,12 @@ class Model {
             
             do {
                 let response = try decoder.decode(Response.self, from: data!)
-                dump(response)
-                completion(response, nil)
+                
+                let video = response.items
+                
+                dump(video)
+                
+                completion(video, nil)
             }
             catch {
                 completion(nil, error)

@@ -71,10 +71,10 @@
 				3130A73926E8BE12002F5BFB /* Assets.xcassets */,
 				3130A73B26E8BE12002F5BFB /* LaunchScreen.storyboard */,
 				3130A73E26E8BE12002F5BFB /* Info.plist */,
-				3130A74A26EA0D77002F5BFB /* Constants.swift */,
-				3130A74C26EA0FB7002F5BFB /* Video.swift */,
-				3130A74E26EA1237002F5BFB /* Model.swift */,
 				3130A75026EA478C002F5BFB /* Response.swift */,
+				3130A74C26EA0FB7002F5BFB /* Video.swift */,
+				3130A74A26EA0D77002F5BFB /* Constants.swift */,
+				3130A74E26EA1237002F5BFB /* Model.swift */,
 			);
 			path = "youtube-franky";
 			sourceTree = "<group>";
