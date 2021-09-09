@@ -1,5 +1,5 @@
 //
-//  Model.swift
+//  ApiService.swift
 //  youtube-franky
 //
 //  Created by franky on 09/09/2021.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Model {
+class ApiService {
     
     static func getVideo(completion: @escaping (_ response: [Video]?, _ error: Error?) -> Void) {
         
@@ -29,11 +29,7 @@ class Model {
             
             do {
                 let response = try decoder.decode(Response.self, from: data!)
-                
                 let video = response.items
-                
-                dump(video)
-                
                 completion(video, nil)
             }
             catch {

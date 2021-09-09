@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        Model.getVideo { video, error in
+        ApiService.getVideo { video, error in
             
             DispatchQueue.main.async {
                 self.video = video!
@@ -40,11 +40,11 @@ extension ViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEO_CELL, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.VIDEO_CELL, for: indexPath) as! VideoTableViewCell
         
-        let title = self.video[indexPath.row].title
+        let video = self.video[indexPath.row]
         
-        cell.textLabel?.text = title
+        cell.configureCell(video)
         
         return cell
     }
