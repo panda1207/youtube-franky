@@ -8,14 +8,20 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
+    var response: Response?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        var i = 0
+        Model.getVideo { response, error in
+            
+            DispatchQueue.main.async {
+                self.response = response
+            }
+        }
     }
-
 
 }
 
